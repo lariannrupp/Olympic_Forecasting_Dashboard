@@ -31,6 +31,7 @@ all_time_count_df = pd.read_csv(Path('../Resources/all_time_count.csv'))
 beijing_total_medal_count_forecast_df = pd.read_csv(Path('../Resources/beijing_total_medal_count_forecast.csv'))
 all_winter_medals_df = pd.read_csv(Path("../Resources/all_winter_medals_locations_gsb.csv"))
 medal_summary_stats_df = pd.read_csv(Path("../Resources/medal_summary_stats.csv"))
+medal_quality_df = pd.read_csv(Path('../Resources/medal_quality.csv'))
 
 
 
@@ -46,6 +47,19 @@ user_menu = st.sidebar.radio(
     'Select an option',
     ('Overview', 'Overall Medal Count Prediction', 'Sports Betting Analysis', 'Event Analysis', 'Historic Medal Count World Map')
 )
+
+
+# OVERVIEW
+
+if user_menu == 'Overview':
+    st.title('Overview')
+    st.markdown('As a global event with billions of dollars invested every year by National Olympic Committees, host nation, sponsors, broadcasters and even sport books and their clients, we considered that being able to predict the medal count by country was of high relevance. Not only to make financial decisions by the groups mentioned above but also to understand which are variables that may trigger improved performance in the future.')
+
+    st.subheader('Objective')
+    st.markdown('Leverage available historical data to try to predict the medal count for the 2022 Winter Olympics in a user friendly interface')
+
+    st.subheader('Team')
+    st.markdown('This project was created by Rachel Bates, Daniel English, Lari Rupp, and Jose Viana-Prieto')
 
 
 
@@ -134,7 +148,34 @@ forecast[['ds', 'yhat']].tail(1)'''
     st.markdown("Prophet was run for each cell value and scribed into a final medal count by country and medal ranking, which is displayed at the top of the page.")
 
 
+# SPORTS BETTING ANALYSIS
+if user_menu == 'Sports Betting Analysis':
 
+    st.title('Sports Betting Analysis')
+    st.markdown('Total Beijing Winter Olympic medal numbers were imported and compared with team predicted medal counts.')
+
+    st.markdown('')
+    st.markdown('')
+
+    st.image('../Images/total_number_of_medals_with_projected_totals.jpg', caption='Total Number of Medals with Projected Totals')
+
+    st.markdown('')
+    st.markdown('')
+
+    st.markdown('Total Predictions from the Prophet forcasting tool were calculated to produce gambling odds.')
+    st.image('../Images/projected_medals_with_calculations.jpg', caption='Projected Medal Count with Odds Calculations')
+
+    st.markdown('')
+    st.markdown('')
+
+    st.markdown('American Odds were imported from Odds Shark website and calculated to produce numbers for UK and European odds')
+    st.image('../Images/odds_shark_odds_with_calculations.jpg', caption='Odds Shark American Odds with Calculations for UK and European')
+
+    st.markdown('')
+    st.markdown('')
+
+    st.markdown('Odds Shark Odds were charted to compare with team odds calculations')
+    st.image('../Images/odds_shark_odds_comparison.jpg', caption='Odds Shark Odds with Team Predictions')
 
 
 # WORLD MAP OF MEDALS
@@ -201,7 +242,7 @@ if user_menu == 'Historic Medal Count World Map':
             if st.sidebar.checkbox(layer_name, True)]
         if selected_layers:
             st.pydeck_chart(pdk.Deck(
-                map_style="mapbox://styles/mapbox/light-v9",
+                map_style="mapbox://styles/skrhee/ckbtiaefh0wrr1hp7h4ya3zy4",
                 initial_view_state={"latitude": 44.777781,
                                 "longitude": 31.657627, "zoom": 1, "pitch": 40},
                 layers=selected_layers,
@@ -218,7 +259,12 @@ if user_menu == 'Historic Medal Count World Map':
 
     st.markdown("---")
 
-    st.subheader('Summary Statistics of Historical Medal Data')
+    st.subheader('Summary Statistics of Historic Medal Data')
     st.dataframe(medal_summary_stats_df)
 
+    st.markdown("---")
+
+    st.subheader('Box Plot of Historic Medal Quality')
+    box_plot = medal_quality_df.hvplot.box(y=['Mean Medal Rank'], height=300, width=600, legend=False, title='Mean Medal Rank with Gold=1, Silver=2, Bronze=3', invert=True)
+    st.bokeh_chart(hv.render(box_plot, backend='bokeh'))
 
