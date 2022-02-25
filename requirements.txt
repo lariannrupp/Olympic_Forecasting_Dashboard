@@ -1,8 +1,0 @@
-streamlit
-pandas
-pathlib
-pydeck
-urllib.error
-PIL
-hvplot.pandas
-holoviews
