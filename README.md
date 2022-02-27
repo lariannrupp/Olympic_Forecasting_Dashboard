@@ -52,7 +52,9 @@ pip install prophet
 
 <br>
 This applications uses pandas<br>
-<img src="https://pandas.pydata.org/docs/_static/pandas.svg" alt="Pandas Logo" width="200"><br>
+<img src="https://pandas.pydata.org/docs/_static/pandas.svg" alt="Pandas Logo" width="200">
+<br>
+
 ```
 pip install pandas
 ```
