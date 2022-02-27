@@ -27,7 +27,9 @@ This application requires:<br>
 pip install streamlit
 ```
 <br>
-<img src="https://docs.jupyter.org/en/latest/_static/jupyter.svg" width="200" alt="Jupyter Logo"><br>
+<img src="https://docs.jupyter.org/en/latest/_static/jupyter.svg" width="200" alt="Jupyter Logo">
+<br>
+
 ```
 pip install jupyterlab
 ```
