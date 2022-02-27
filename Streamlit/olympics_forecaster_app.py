@@ -32,7 +32,7 @@ all_winter_medals_df = pd.read_csv(Path("../Resources/all_winter_medals_location
 medal_summary_stats_df = pd.read_csv(Path("../Resources/medal_summary_stats.csv"))
 medal_quality_df = pd.read_csv(Path('../Resources/medal_quality.csv'))
 temp_only_df = pd.read_csv(Path('../Resources/temp_only.csv'))
-
+predicted_vs_actual_df = pd.read_csv(Path('../Resources/event_level_predicted_vs_actual.csv'))
 
 
 
@@ -46,7 +46,7 @@ st.image(logo)
 st.sidebar.title("Winter Olympics Forecaster App")
 user_menu = st.sidebar.radio(
     'Select an option',
-    ('Overview', 'Overall Medal Count Prediction', 'Sports Betting Analysis', 'Historic Medal Count World Map', 'Temperature Data')
+    ('Overview', 'Overall Medal Count Prediction', 'Sports Betting Analysis', 'Historic Medal Count World Map', 'Prediction From Recent Events Results', 'Temperature Data')
 )
 
 
@@ -286,3 +286,14 @@ if user_menu == 'Temperature Data':
     temp_chart= temp_only_df.hvplot(kind='bar', title= 'Average Annual Temperatures', x = 'Country Name', y = 'Avg Annual Temp (Celsius)', rot=90, height=450, width=900)
 
     st.bokeh_chart(hv.render(temp_chart, backend='bokeh'))
+
+
+if user_menu =='Prediction From Recent Events Results':
+    
+    st.title('Prediction From Recent Events Results')
+
+    st.subheader('Total Medals by Recent Event Results')
+
+    predicted_vs_actual_df = predicted_vs_actual_df.hvplot.bar(x='Country', y=['Actual', 'Predicted'], width=1300, legend='top_left', rot=90)
+
+    st.bokeh_chart(hv.render(predicted_vs_actual_df, backend='bokeh'))
