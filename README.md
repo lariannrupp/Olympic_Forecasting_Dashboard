@@ -2,7 +2,7 @@
 <img src="Images/olympics_app_logo.jpg"  width="400" alt="Winter Olympics Logo">
 
 # Olympics_Forecasting_Dashboard
-This application deploys a dashboard that uses financial modeling tools to forecast outcomes for the Olympic Games. It uses that data to project booksmakers odds charts for betting and compares it to popular betting websites odds.  The application charts the final medal counts for the 2022 Beijing Winter Olympics with an overlay of the application predictions.
+This application uses Facebook Prophet to forecast outcomes for the 2022 Beijing Winter Olympic Games based on the historical data from all previous Winter Olympic games. It then takes that data to project odds charts for betting and compares those odds to popular betting websites odds.  The application charts the final medal counts for the 2022 Beijing Winter Olympics with an overlay of the application predictions. Also included are charts showing the historic medal count on a world map and medals on a temperature map with hypotheses that medal counts are related to country annual temperature.
 <br><br>
 This application is well suited for predicting not only Olympic games, but any sporting event that has historical data.
 
