@@ -7,7 +7,7 @@ This application deploys a dashboard that uses financial modeling tools to forec
 This application is well suited for predicting not only Olympic games, but any sporting event that has historical data.
 
 ---
-<br>
+## Overall Medal Count Prediction
 <img src="Images/overall_medal_count_prediction.jpg" width="400" alt="Overall Medal Count Prediction">
 <br><br>
 
@@ -23,14 +23,11 @@ This application is well suited for predicting not only Olympic games, but any s
 This application requires:<br>
 
 <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png" width="200" alt="Streamlit Logo"><br>
-<br>
 ```
 pip install streamlit
 ```
 <br>
 <img src="https://docs.jupyter.org/en/latest/_static/jupyter.svg" width="200" alt="Jupyter Logo"><br>
-<br>
-
 ```
 pip install jupyterlab
 ```
@@ -53,9 +50,7 @@ pip install prophet
 
 <br>
 This applications uses pandas<br>
-<img src="https://pandas.pydata.org/docs/_static/pandas.svg" alt="Pandas Logo" width="200">
-<br>
-
+<img src="https://pandas.pydata.org/docs/_static/pandas.svg" alt="Pandas Logo" width="200"><br>
 ```
 pip install pandas
 ```
