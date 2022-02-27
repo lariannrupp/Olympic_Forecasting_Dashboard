@@ -1,5 +1,5 @@
 
-<img src="Images/olympics_app_logo.jpg"  width="600" alt="Winter Olympics Logo") 
+<img src="Images/olympics_app_logo.jpg"  width="600" alt="Winter Olympics Logo">
 
 # Olympics_Forecasting_Dashboard
 This application deploys a dashboard that uses financial modeling tools to forecast outcomes for the Olympic Games. It uses that data to project booksmakers odds charts for betting and compares it to popular betting websites odds.  The application charts the final medal counts for the 2022 Beijing Winter Olympics with an overlay of the application predictions.
@@ -27,11 +27,11 @@ This application requires:<br>
 pip install streamlit
 ```
 <br>
-<img src="https://docs.jupyter.org/en/latest/_static/jupyter.svg" width="200" alt="Jupyter Logo">
+<img src="https://docs.jupyter.org/en/latest/_static/jupyter.svg" width="200" alt="Jupyter Logo"><br>
 <br>
 ```
 pip install jupyterlab
-````
+```
 <br>
 This application uses pystan
 <br>
