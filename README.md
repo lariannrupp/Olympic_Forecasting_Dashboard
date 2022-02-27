@@ -1,27 +1,76 @@
+
+<img src="Images/olympics_app_logo.jpg"  width="600" alt="Winter Olympics Logo") 
 # Olympics_Forecasting_Dashboard
+This application deploys a dashboard that uses financial modeling tools to forecast outcomes for the Olympic Games. It uses that data to project booksmakers odds charts for betting and compares it to popular betting websites odds.  The application charts the final medal counts for the 2022 Beijing Winter Olympics with an overlay of the application predictions.
+
+This application is well suited for predicting not only Olympic games, but any sporting event that has historical data.
+<img src="Images/overall_medal_count_prediction.jpg" width="600" alt="Overall Medal Count Prediction">
+<br><br>
+
+## Actual Medal Count with Predictions
+<img src="Images/total_number_of_medals_with_projected_totals.jpg" width="600" alt="Actual Total Number of Medals with Projected Totals">
+<br><br>
+
+<img src="">
+
+## Historic Medal Count Map
+<img src="Images/historic_medal_count_map.jpg" width="600" alt="Historic Medal Count Map">
+
+
+## Technologies
+This application requires:
+![Streamlit Logo](https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png | width=200)
+<br>Streamlit
+<br>
+```
+pip install streamlit
+```
+<br>
+![Jupyter Logo](https://docs.jupyter.org/en/latest/_static/jupyter.svg | width=200)
+<br>This notebook requires Jupyter lab
+<br>Installation:
+```
+pip install jupyterlab
+````
+This application uses pystan
+```
+pip install pystan
+```
+This application uses Prophet
+```
+pip install prophet
+```
+This applications uses pandas<br>
+![pandas Logo](https://pandas.pydata.org/docs/_static/pandas.svg | width=200)
+```
+pip install pandas
+```
+This application uses Pathlib<br>
+```
+pip install pathlib
+```
+
+![PyViz Logo](https://pyviz.org/_static/logo.png | width=200)
+<br>This application uses pyviz and the associated hvplot and geoviews
+```
+conda install -c pyviz hvplot geoviews
+```
+<br>This application requires bokeh
+```
+pip install bokeh
+```
+
+
 ---
----
-
-
-Purpose:
-This application deploys a dashboard that uses financial modeling tools to forecast outcomes for the Olympic Games.
-
-We are creating interactive data vizualizations for the following:
-
-- Overall medal count
-
-<img width="437" alt="image" src="https://user-images.githubusercontent.com/95719899/154389219-ce82e577-bf00-4f47-b340-434786ad71f6.png">
-<img width="636" alt="image" src="https://user-images.githubusercontent.com/95719899/154389514-b8dabe89-a1fb-4613-8fba-6c7d5b04acb4.png">
-<img width="868" alt="image" src="https://user-images.githubusercontent.com/95719899/154389614-087b2b97-1b24-49c4-b3c5-967ab1dd6004.png">
-
-
-- Zooming in on a select event and creating a forecasting toolset for it
-
-- Performing a comparative analysis of our financial model to the current predictive model of a popular sports-betting website
-
-
-Team Members:
+## Contributors
 Rachel Bates,
 Daniel English,
 Lari Rupp,
 Enrique Viana
+
+---
+
+## License
+Creative Commons
+
+
