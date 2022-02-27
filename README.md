@@ -22,39 +22,44 @@ This application is well suited for predicting not only Olympic games, but any s
 This application requires:<br>
 
 <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png" width="200" alt="Streamlit Logo"><br>
-<br>Streamlit
 <br>
 ```
 pip install streamlit
 ```
 <br>
 <img src="https://docs.jupyter.org/en/latest/_static/jupyter.svg" width="200" alt="Jupyter Logo">
-<br>This notebook requires Jupyter lab
-<br>Installation:
+<br>
 ```
 pip install jupyterlab
 ````
-
+<br>
 This application uses pystan
+<br>
 ```
 pip install pystan
 ```
+<br>
 This application uses Prophet
+<br>
 ```
 pip install prophet
 ```
+<br>
 This applications uses pandas<br>
 <img src="https://pandas.pydata.org/docs/_static/pandas.svg" alt="Pandas Logo" width="200">
 <br>
 ```
 pip install pandas
 ```
+<br>
 This application uses Pathlib<br>
 ```
 pip install pathlib
 ```
+<br>
 <img src="https://pyviz.org/_static/logo.png" alt="Pyviz Logo" width=200>
-<br>This application uses pyviz and the associated hvplot and geoviews
+<br>
+This application uses pyviz and the associated hvplot and geoviews
 ```
 conda install -c pyviz hvplot geoviews
 ```
